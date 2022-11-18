@@ -5,37 +5,13 @@
         <title>大屏</title>
     </head>
     <body>
+      <iframe
+      src="http://localhost:3000/public/dashboard/e0a2dc78-ae12-4dca-aef0-fbf59003f461"
+      frameborder="0"
+      style="width:100%;height: 1000px;"
+      allowtransparency
+      scrolling="no"
+  ></iframe>
+</body>
 
-    <script type="text/javascript">
-
-      // you will need to install via 'npm install jsonwebtoken' or in your package.json
-
-var jwt = require("jsonwebtoken");
-
-var METABASE_SITE_URL = "http://localhost:3000";
-var METABASE_SECRET_KEY = "ae876f638d347d01de53cd566f4e9e28751e20a6f0c8b2efc9b2d27809b535c4";
-
-var payload = {
-  resource: { dashboard: 193 },
-  params: {},
-  exp: Math.round(Date.now() / 1000) + (10 * 60) // 10 minute expiration
-};
-var token = jwt.sign(payload, METABASE_SECRET_KEY);
-
-var iframeUrl = METABASE_SITE_URL + "/embed/dashboard/" + token + "#bordered=false&titled=true";
-
- iframeUrl
-
-    </script>
-    
-
-    <iframe
-    src="iframeUrl"
-    frameborder="0"
-    width="800"
-    height="600"
-    allowtransparency
-></iframe>
-
-    </body>
     </html>
